@@ -183,7 +183,7 @@
       (forward-line 1)))
       (widen))
 
-;; Insert a + before each line which will make the lines a bullet point list
+;; Insert a 1 before each line which will make the lines a numbered list
 (defun insert-1-before-each-line (beg end)
   "Insert '1' before each line in the region"
   (interactive "r")

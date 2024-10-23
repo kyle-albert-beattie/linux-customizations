@@ -47,7 +47,7 @@ colors = colors.DoomOne
 layout_theme = {
 "border_width": 2,
 "margin": 4,
-"border_focus" : "#990066",
+"border_focus" : "#006699",
 "margin_on_single" : 13,
 "max_ratio" : 0.618,
 "border_normal": colors[0]
