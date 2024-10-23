@@ -41,13 +41,13 @@ mod = "mod4"              # Sets mod key to SUPER/WINDOWS
 myTerm = "gnome-terminal"      # My terminal of choice
 myBrowser = "brave-browser-beta"       # My browser of choice
 #myEmacs = "emacs" # The space at the end is IMPORTANT!
-font = "Mx437 DOS/V re. JPN30"
+font = "MxPlus ToshibaSat 8x16"
 colors = colors.DoomOne
 
 layout_theme = {
 "border_width": 2,
 "margin": 4,
-"border_focus" : "#3333FF",
+"border_focus" : "#990066",
 "margin_on_single" : 13,
 "max_ratio" : 0.618,
 "border_normal": colors[0]
@@ -313,7 +313,7 @@ keys.extend([
 layouts = [
     #layout.Bsp(**layout_theme),
     #layout.Floating(**layout_theme)
-    layout.RatioTile(**layout_theme),
+    #layout.RatioTile(**layout_theme),
     #layout.VerticalTile(**layout_theme),
     #layout.Matrix(**layout_theme),
     layout.MonadTall(**layout_theme),
@@ -330,7 +330,7 @@ layouts = [
     #     border_focus=GradientBorder(colors=["00f", "0ff"])
     # ),
     layout.Max(
-         border_width = 2,
+         border_width = 0,
          margin = 1,
          ),
     layout.Spiral(
