@@ -234,9 +234,9 @@
   "Begins an org document with all necessary title information"
   (interactive)
   (insert "#+TITLE:
-#+AUTHOR: Kyle A. Beattie
-#+EMAIL: kbeattie@ualberta.ca
-#+DATE: September 27, 2024
+#+AUTHOR:
+#+EMAIL:
+#+DATE:
 #+DESCRIPTION:
 #+OPTIONS: H:3
 #+HTML_HEAD_EXTRA: <style>body { font-size: 24px; }</style>
