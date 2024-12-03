@@ -47,7 +47,7 @@ colors = colors.DoomOne
 layout_theme = {
 "border_width": 2,
 "margin": 4,
-"border_focus" : "#006699",
+"border_focus" : "#33FFFF",
 "margin_on_single" : 13,
 "max_ratio" : 0.618,
 "border_normal": colors[0]
@@ -127,10 +127,10 @@ keys = [
     Key([mod], "l", lazy.spawn("libreoffice"), desc="libreoffice"),
     Key([mod, "shift"], "l", lazy.spawn("gnome-system-monitor"), desc="gnome-system-monitor"),
     #m
-    Key([mod], "m", lazy.spawn("cvlc /home/kyle/Music/NWNDIAMONDFULLOST.mp3 --gain 1"), desc="Play NWN soundtrack"),
+    Key([mod], "m", lazy.spawn("/home/kyle/bin/termusic.sh"), desc="Play NWN soundtrack"),
     Key([mod, "shift"], "m", lazy.spawn("cvlc --random /home/kyle/Music/work-music/ --gain 1"), desc="Play Random Music from Work Music Folder"),
     Key([mod, "control"], "m", lazy.spawn("cvlc --random /media/kyle/4B/Music/snes-mixtapes/ --gain 1"), desc="Play Random Music from SNES Music Folder"),
-    Key([mod, "mod1"], "m", lazy.spawn("cvlc /home/kyle/Music/oblivion.mp3"), desc="Play Oblivion soundtrack"),
+    Key([mod, "mod1"], "m", lazy.spawn("bash /home/kyle/bin/termusic.sh"), desc="Play Oblivion soundtrack"),
     Key([mod, "lock"], "m", lazy.spawn("cvlc --random /home/kyle/Music/SNES-chosen/ --gain 1"), desc="Play Random Music from Selected SNES Music Folder"),
     #n
     Key([mod], "n", lazy.spawn("flatpak run engineer.atlas.Nyxt"), desc="nyxt"),
@@ -299,7 +299,7 @@ for i, group in enumerate(groups):
   ])
 
 groups.append(ScratchPad("scratchpad", [
-         DropDown("gedit", "gedit", width=0.5, height=1, x=0.5, opacity=1, warp_pointer=True),
+         DropDown("gedit", "gedit", width=0.65, height=1, x=0.35, opacity=1, warp_pointer=True),
          DropDown("caja", "caja", width=0.425, height=0.8, x=0.55, y=0.1, opacity=.9, warp_pointer=True),
          DropDown("pavucontrol", "pavucontrol", width=0.5, height=0.5, x=0.5, opacity=.9, warp_pointer=True)
     ]))
@@ -315,24 +315,18 @@ layouts = [
     #layout.Floating(**layout_theme)
     #layout.RatioTile(**layout_theme),
     #layout.VerticalTile(**layout_theme),
-    #layout.Matrix(**layout_theme),
     layout.MonadTall(**layout_theme),
-    #layout.MonadWide(**layout_theme),
+    layout.MonadWide(**layout_theme),
     # layout.Tile(
     #      shift_windows=True,
     #      border_width = 0,
     #      margin = 0,
     #      ratio = 0.335,
     #      ),
-    #  layout.Max(
-    #     border_width=10,
-    #     margin=5,
-    #     border_focus=GradientBorder(colors=["00f", "0ff"])
-    # ),
-    layout.Max(
-         border_width = 0,
-         margin = 1,
-         ),
+    # layout.Max(
+    #      border_width = 0,
+    #      margin = 1,
+    #      ),
     layout.Spiral(
         border_width = 3,
         margin =10,
@@ -474,6 +468,7 @@ screens = [
                  other_screen_border = colors[1],
                  ),
          widget.Spacer(length = 8),
+         #widget.Visualizer(),
           widget.Volume(
                   foreground = "#fff",
                   fmt = 'vol: {} |',

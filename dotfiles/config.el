@@ -32,8 +32,8 @@
 ;; There are two ways to load a theme. Both assume the theme is installed and
 ;; available. You can either set `doom-theme' or manually load a theme with the
 ;; `load-theme' function. This is the default:
-(setq doom-theme 'ef-frost)
-;;(setq load-theme 'ef-frost-theme)
+;;(setq doom-theme 'ef-frost)
+(setq load-theme 'farmhouse-dark)
 
 ;; This determines the style of line numbers in effect. If set to `nil', line
 ;; numbers are disabled. For relative line numbers, set this to `relative'.
@@ -172,7 +172,7 @@
     (insert (format "%s" "/*"))))
 
 ;; Insert a + before each line which will make the lines a bullet point list
-(defun insert-x-before-each-line (beg end)
+(defun insert-+-before-each-line (beg end)
   "Insert '+' before each line in the region"
   (interactive "r")
   (save-excursion
@@ -230,7 +230,7 @@
         (insert line)))))
 
 ;; Paste the boilerplate of an org document
-(defun paste-static-text ()
+(defun org-full-top-header ()
   "Begins an org document with all necessary title information"
   (interactive)
   (insert "#+TITLE:
@@ -239,7 +239,7 @@
 #+DATE: September 27, 2024
 #+DESCRIPTION:
 #+OPTIONS: H:3
-#+HTML_HEAD_EXTRA: <style>body { font-size: 24px; }</style>
+#+HTML_HEAD_EXTRA: <style>body { font-size: 24px; }</style> <link rel="stylesheet" href="https://latex.vercel.app/style.css"> 
 #+LATEX_HEADER: \mode<beamer>{\u0073setheme{Goettingen}}
 #+KEYWORDS:
 #+LANGUAGE: en"))
@@ -417,7 +417,6 @@ argument forces this mode off; otherwise the mode is toggled."
 ;; (default +bindings +smartparens))
 
 ;; eradio Settings
-
 (use-package eradio
   :init
   (setq eradio-player '("vlc" "--no-video" "--no-terminal"))

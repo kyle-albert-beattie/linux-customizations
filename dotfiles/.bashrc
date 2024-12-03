@@ -152,10 +152,12 @@ curl -# -F inputDocument=@"$1" http://www.doc2pdf.net/convert/document.pdf > "${
 
 # Created by `pipx` on 2023-08-28 04:38:45
 export PATH="$PATH:/root/.local/pipx/venvs/bitchute-dl"
+export PKG_CONFIG_PATH=/usr/lib/x86_64-linux-gnu/pkgconfig:$PKG_CONFIG_PATH
 export PATH="$PATH:/usr/local/bin/vmd"
 export PATH="$PATH:/usr/local/bin/nyxt"
 export PATH="$PATH:/home/kyle/.cargo/bin"
 export PATH="$PATH:/home/kyle/.local/pipx/venvs/radio-active/bin"
+export PATH="$PATH:/home/linuxbrew/.linuxbrew/opt/python@3.12/lib/python3.12/site-packages"
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="$HOME/.local/bin:$PATH"
 export PATH="$PATH:/.local/bin"
@@ -204,3 +206,4 @@ eval "$(fzf --bash)"
 
 [[ -f ~/.bash-preexec.sh ]] && source ~/.bash-preexec.sh
 eval "$(atuin init bash)"
+. "$HOME/.cargo/env"

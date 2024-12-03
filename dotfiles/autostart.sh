@@ -7,9 +7,11 @@
 xsession &
 xcompmgr &
 picom &
+/usr/bin/kdeconnect-app &
+/usr/bin/kdeconnect-indicator &
 nm-applet &
 /usr/bin/lxpolkit &
-#/usr/bin/emacs --daemon &
+/usr/bin/emacs --daemon &
 /home/kyle/bin/x_wallpaper.sh &
 /home/kyle/bin/greeting.sh &
 
